@@ -1,0 +1,43 @@
+default_language_version:
+    python: python3
+repos:
+      - repo: https://github.com/psf/black
+        rev: 21.9b0
+        hooks:
+          - id: black
+            args: ['--skip-string-normalization', '--target-version=py39', '--config=pyproject.toml', '--line-length=119']
+      - repo: git://github.com/dnephin/pre-commit-golang
+        rev: v0.4.0
+        hooks:
+          - id: go-fmt
+      -   repo: https://github.com/pre-commit/pre-commit-hooks
+          rev: v4.0.1
+          hooks:
+          - id: check-added-large-files
+          - id: check-case-conflict
+          - id: check-merge-conflict
+          - id: check-docstring-first
+          - id: check-builtin-literals
+          - id: check-executables-have-shebangs
+          - id: check-symlinks
+          - id: destroyed-symlinks
+          - id: check-xml
+          - id: check-toml
+          - id: check-yaml
+          - id: check-json
+          - id: detect-aws-credentials
+          - id: mixed-line-ending
+          - id: name-tests-test
+          # - id: no-commit-to-branch
+            # args: [--branch, main]
+          - id: debug-statements
+          - id: detect-private-key
+          - id: forbid-new-submodules
+          - id: mixed-line-ending
+            args: [--fix=auto]
+          - id: double-quote-string-fixer
+          - id: end-of-file-fixer
+          - id: fix-byte-order-marker
+          - id: fix-encoding-pragma
+          - id: requirements-txt-fixer
+          - id: trailing-whitespace
