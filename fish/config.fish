@@ -26,3 +26,9 @@ alias ll "ls -l -g --icons --git --header --modified --sort=mod --reverse"
 alias lll "ll --accessed --created"
 alias lt "ll --tree --level=2"
 alias lla "lll -a"
+
+alias r "HTTPSTAT_SHOW_BODY=true HTTPSTAT_SAVE_BODY=false httpstat"
+alias rr "HTTPSTAT_SHOW_SPEED=true r"
+
+# https://github.com/dbcli/mycli
+alias mysql mycli
