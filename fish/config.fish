@@ -33,7 +33,12 @@ switch (uname)
         source (dirname (status --current-filename))/config-windows.fish
 end
 
-alias ls "exa --icons"
 alias g git
-alias ll "exa -l -g --icons"
-alias lla "ll -a"
+alias grep ag
+
+# https://www.nerdfonts.com/font-downloads / https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip / https://the.exa.website/features/icons
+alias ls "exa --icons --oneline --binary"
+alias ll "ls -l -g --icons --git --header --modified --sort=mod --reverse"
+alias lll "ll --accessed --created"
+alias lt "ll --tree --level=2"
+alias lla "lll -a"
