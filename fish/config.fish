@@ -14,27 +14,11 @@ fish_add_path /usr/local/opt/gnu-sed/libexec/gnubin
 set -g GOPATH $HOME/go
 fish_add_path $GOPATH/bin
 
-# NVM
-function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-    status --is-command-substitution; and return
-
-    if test -f .nvmrc; and test -r .nvmrc;
-        nvm use
-    else
-    end
-end
-
-switch (uname)
-    case Darwin
-        source (dirname (status --current-filename))/config-osx.fish
-    case Linux
-        # Do nothing
-    case '*'
-        source (dirname (status --current-filename))/config-windows.fish
-end
-
 alias g git
-alias grep ag
+alias f "ag --ignore='/usr/local*' -i --column --silent --stats -a -m=100"
+alias grep f
+alias ff "f -g"
+alias fff "f --context=1"
 
 # https://www.nerdfonts.com/font-downloads / https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip / https://the.exa.website/features/icons
 alias ls "exa --icons --oneline --binary"
