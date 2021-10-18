@@ -10,6 +10,11 @@ fish_add_path /usr/local/sbin
 fish_add_path /usr/local/opt/openjdk/bin
 fish_add_path /usr/local/opt/coreutils/libexec/gnubin
 fish_add_path /usr/local/opt/gnu-sed/libexec/gnubin
+fish_add_path $HOME/Codes/sherlock/sherlock/
+fish_add_path /usr/local/Cellar/node/16.11.1/bin/
+
+set -g LC_ALL en_US.UTF-8
+set -g LANG en_US.UTF-8
 
 set -g GOPATH $HOME/go
 fish_add_path $GOPATH/bin
@@ -32,3 +37,9 @@ alias rr "HTTPSTAT_SHOW_SPEED=true r"
 
 # https://github.com/dbcli/mycli
 alias mysql mycli
+alias is "sherlock.py --timeout=60"
+
+alias top "htop -H"
+alias nnn "nnn -e"
+
+thefuck --alias
