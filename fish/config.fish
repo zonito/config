@@ -42,4 +42,4 @@ alias is "sherlock.py --timeout=60"
 alias top "htop -H"
 alias nnn "nnn -e"
 
-thefuck --alias
+thefuck --alias | source

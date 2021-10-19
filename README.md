@@ -27,6 +27,14 @@ nvim
 :q!
 ```
 
+# gpg Setup for Transfer
+
+```shell
+
+gpg --import "BW_KEY"
+```
+
+
 ## Windows Troubleshoot
 
 ```sh
