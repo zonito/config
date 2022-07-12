@@ -1,0 +1,22 @@
+version: 1.0.0
+
+packages:
+- name: nnn
+- name: nvim
+  version: 0.5.1
+- name: exa
+  post_commands: ['alias ls=exa']
+- name: peco
+- name: git
+- name: gpg
+- name: mysql
+- name: python
+  version: 3.9.7
+  overwrite: true
+- name: pip
+  depends_on: ['python']
+- name: node
+  version: '4.0.0'
+- name: npm
+  depends_on: ['node']
+  overwrite: true

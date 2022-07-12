@@ -1,0 +1,1 @@
+/Users/sharmal/.fig/shell/post.fish

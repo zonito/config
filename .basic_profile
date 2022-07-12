@@ -1,0 +1,20 @@
+#!/usr/bin/env fish
+alias grep ag
+set -gx VERSIONER_PYTHON_PREFER_32_BIT "yes"
+set -gx VERSIONER_PYTHON_PREFER_64_BIT "no"
+set -gx CFLAGS -Qunused-arguments
+set -gx CPPFLAGS -Qunused-arguments
+set -gx LC_ALL en_US.UTF-8
+set -gx LANG en_US.UTF-8
+alias yd="python youtube-dl"
+alias gl1="git log --pretty=oneline -1 | cut -f 1"
+function gsync
+  git fetch upstream
+  git merge upstream/master
+end
+alias server "python -m SimpleHTTPServer"
+set -gx HOME /Users/sharmal
+set -gx GOPATH $HOME/go
+set -gx GOROOT /usr/local/opt/go/libexec
+set -gx PATH $GOPATH/bin $PATH
+set -gx PATH $GOROOT/bin $PATH
